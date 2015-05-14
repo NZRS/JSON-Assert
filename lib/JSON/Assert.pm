@@ -29,12 +29,6 @@ sub _self {
     return __PACKAGE__->new();
 }
 
-#has 'error' =>
-#    is => "rw",
-#    isa => "Str",
-#    clearer => "_clear_error",
-#    ;
-
 # assert_jpath_count
 sub assert_jpath_count {
     my $self = _self(\@_);
