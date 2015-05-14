@@ -1,5 +1,5 @@
 ## ----------------------------------------------------------------------------
-# Copyright (C) 2014 NZ Registry Services
+# Copyright (C) 2014-2105 NZRS Ltd
 ## ----------------------------------------------------------------------------
 package JSON::Assert;
 
@@ -9,8 +9,8 @@ use Test::Deep::NoTest;
 
 $JSON::Path::Safe = 0;
 
-our $VERSION = '0.01';
-our $VERBOSE = $ENV{JSON_ASSERT_VERBOSE} || 0;
+our $VERSION = '0.02';
+our $VERBOSE = $ENV{JSON_ASSERT_VERBOSE} || 1;
 
 has 'error' =>
     is => "rw",
@@ -29,11 +29,11 @@ sub _self {
     return __PACKAGE__->new();
 }
 
-has 'error' =>
-    is => "rw",
-    isa => "Str",
-    clearer => "_clear_error",
-    ;
+#has 'error' =>
+#    is => "rw",
+#    isa => "Str",
+#    clearer => "_clear_error",
+#    ;
 
 # assert_jpath_count
 sub assert_jpath_count {
@@ -374,12 +374,11 @@ E<lt>andrew at etc dot gen dot nz<gt>, http://www.etc.gen.nz/
 
 =head1 COPYRIGHT & LICENSE
 
-This software development is sponsored and directed by New Zealand Registry
-Services, http://www.nzrs.net.nz/
+This software development is sponsored and directed by NZRS Ltd., http://www.nzrs.net.nz/
 
-The work is being carried out by Catalyst IT, http://www.catalyst.net.nz/
+Part od the work was carried out by Catalyst IT, http://www.catalyst.net.nz/
 
-Copyright (c) 2014, NZ Registry Services.  All Rights Reserved.  This software
+Copyright (c) 2014-2015, NZRS Limited.  All Rights Reserved.  This software
 may be used under the terms of the Artistic License 2.0.  Note that this
 license is compatible with both the GNU GPL and Artistic licenses.  A copy of
 this license is supplied with the distribution in the file COPYING.txt.

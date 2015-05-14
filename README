@@ -33,10 +33,10 @@ value is "Hello, World!":
 
     my $data = decode_json $json;
    
-    my $xml_assert = XML::Assert->new();
+    my $json_assert = JSON::Assert->new();
 
-    $xml_assert->is_jpath_count($data, '$.NZSRSResponse.Response.Domain', 1);
-    $xml_assert->does_jpath_value_match($doc, '$.NZSRSResponse.Response.Domain', 'Hello, World!')
+    $json_assert->is_jpath_count($data, '$.NZSRSResponse.Response.Domain', 1);
+    $json_assert->does_jpath_value_match($doc, '$.NZSRSResponse.Response.Domain', 'Hello, World!')
 
 INSTALLATION
 ============
@@ -65,12 +65,11 @@ Written by Andrew Ruthven:
 
 Based on XML::Assert by Andrew Chilton.
 
-This software development is sponsored and directed by New Zealand Registry
-Services, http://www.nzrs.net.nz/
+This software development is sponsored and directed by NZRS Limited, http://www.nzrs.net.nz/
 
-The work is being carried out by Catalyst IT, http://www.catalyst.net.nz/
+Part of work was carried out by Catalyst IT, http://www.catalyst.net.nz/
 
-Copyright (c) 2014, NZ Registry Services.  All Rights Reserved.  This software
+Copyright (c) 2014-2015, NZRS.  All Rights Reserved.  This software
 may be used under the terms of the Artistic License 2.0.  Note that this
 license is compatible with both the GNU GPL and Artistic licenses.  A copy of
 this license is supplied with the distribution in the file COPYING.txt.

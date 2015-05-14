@@ -1,5 +1,14 @@
 =head1 CHANGELOG FOR XML::Assert
 
+=head2 VERSION 0.02, 14 MAY 2015
+
+=over
+
+=item *
+
+Fixed unit tests, updated copyright info
+
+=back
 =head2 VERSION 0.01, 22 JANUARY 2014
 
 =over
