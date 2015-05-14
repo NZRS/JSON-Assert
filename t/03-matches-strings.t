@@ -21,10 +21,9 @@ my $tests_ok = [
        name  => q{First artist is Bob Dylan},
    },
    {
-       #jpath => q{$..cd[?(defined $_->{genre})][1].genre},
-       jpath => q{$..cd[?($_->{genre}) eq 'Country')].genre},
-       match => q{Country},
-       name  => q{Second CD with a 'genre' attribute is a Country album},
+       jpath => q{$..cd[?($_->{genre} eq 'Pop')].artist},
+       match => qr{Tyler},
+       name  => q{Pop CD artist matches Tyler},
    },
 ];
 
