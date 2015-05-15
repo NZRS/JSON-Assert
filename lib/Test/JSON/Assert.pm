@@ -16,7 +16,7 @@ our @EXPORT = qw(
     do_jpath_values_match
 );
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 my $CLASS = __PACKAGE__;
 

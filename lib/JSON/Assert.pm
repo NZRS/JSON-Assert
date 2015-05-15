@@ -9,7 +9,7 @@ use Test::Deep::NoTest;
 
 $JSON::Path::Safe = 0;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 our $VERBOSE = $ENV{JSON_ASSERT_VERBOSE} || 1;
 
 has 'error' =>
@@ -292,8 +292,6 @@ there are equivalent methods which do not die, but instead return a truth
 value. They are does_jpath_count(), does_jpath_value_match() and
 do_jpath_values_match().
 
-Note: all of the *_match() methods use the smart match operator C<~~> against
-node to test for truth.
 
 =head1 SUBROUTINES
 
