@@ -9,7 +9,7 @@ use Test::Deep::NoTest;
 
 $JSON::Path::Safe = 0;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 our $VERBOSE = $ENV{JSON_ASSERT_VERBOSE} || 1;
 
 has 'error' =>
@@ -100,7 +100,8 @@ sub assert_jpath_value_match {
     # check the value is what we expect
     my $value = $values[0];
     print "assert_jpath_value_match: This value's value : " . $value . "\n" if $VERBOSE;
-    unless ( $value ~~ $match ) {
+    return 1 if (ref($value) eq ref($match) && ref($value) eq 'HASH' && scalar(keys(%$value)) == 0 && scalar(keys(%$match)) == 0);
+    unless ( $value =~ $match ) {
         die "JPath '$jpath' doesn't match '$match' as expected, instead it is '" . $value . "'";
     }
 
@@ -150,7 +151,11 @@ sub assert_jpath_values_match {
     my $i = 0;
     foreach my $value ( @$values ) {
 	print "assert_jpath_value_match: This keys's value : " . $value . "\n" if $VERBOSE;
-        unless ( $value ~~ $match ) {
+        if (ref($value) eq ref($match) && ref($value) eq 'HASH' && scalar(keys(%$value)) == 0 && scalar(keys(%$match)) == 0){
+          $i++;
+          next;
+        }
+        unless ( $value =~ $match ) {
             die "Item $i of JPath '$jpath' doesn't match '$match' as expected, instead it is '" . $value . "'";
         }
         $i++;
@@ -287,8 +292,6 @@ there are equivalent methods which do not die, but instead return a truth
 value. They are does_jpath_count(), does_jpath_value_match() and
 do_jpath_values_match().
 
-Note: all of the *_match() methods use the smart match operator C<~~> against
-node to test for truth.
 
 =head1 SUBROUTINES
 
