@@ -8,7 +8,7 @@ use JSON;
 use FindBin qw($Bin);
 use lib "$Bin";
 
-# $JSON::Assert::VERBOSE = 1;
+$JSON::Assert::VERBOSE = 1;
 
 require 'data.pl';
 
@@ -16,7 +16,7 @@ my $json = decode_json( json() );
 
 my $tests_ok = [
    {
-       jpath => q{$..cd[?($.genre eq 'Country')]},
+       jpath => q{$..cd[?($_->{genre} eq 'Country')].artist},
        match => qr{Dolly Parton},
        name  => q{The Country CD is Dolly Parton},
    },

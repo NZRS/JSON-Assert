@@ -6,11 +6,11 @@ _build*
 pm_to_blib*
 *.tar.gz
 .lwpcookies
-XML-Assert-*
+JSON-Assert-*
 cover_db
 /MANIFEST
 /*.bak
 /inc
-/META.*
 /SIGNATURE*
 /*-stamp
+*~

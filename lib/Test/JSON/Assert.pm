@@ -1,12 +1,11 @@
 ## ----------------------------------------------------------------------------
-# Copyright (C) 2014 NZ Registry Services
+# Copyright (C) 2014-2015 NZRS Ltd.
 ## ----------------------------------------------------------------------------
 package Test::JSON::Assert;
 
 use 5.006000;
 use strict;
 use warnings;
-#use base 'Test::Builder::Module';
 use Test::Builder::Module;
 our @ISA = qw(Test::Builder::Module);
 use JSON::Assert;
@@ -17,7 +16,7 @@ our @EXPORT = qw(
     do_jpath_values_match
 );
 
-our $VERSION = '0.01';
+our $VERSION = '0.03';
 
 my $CLASS = __PACKAGE__;
 
@@ -142,12 +141,11 @@ E<lt>andrew at etc dot gen dot nz<gt>, http://www.etc.gen.nz/
 
 =head1 COPYRIGHT & LICENSE
 
-This software development is sponsored and directed by New Zealand Registry
-Services, http://www.nzrs.net.nz/
+This software development is sponsored and directed by NZRS Ltd., http://www.nzrs.net.nz/
 
-The work is being carried out by Catalyst IT, http://www.catalyst.net.nz/
+Part of work was carried out by Catalyst IT, http://www.catalyst.net.nz/
 
-Copyright (c) 2014, NZ Registry Services.  All Rights Reserved.  This software
+Copyright (c) 2014-2015, NZRS Limited.  All Rights Reserved.  This software
 may be used under the terms of the Artistic License 2.0.  Note that this
 license is compatible with both the GNU GPL and Artistic licenses.  A copy of
 this license is supplied with the distribution in the file COPYING.txt.
