@@ -14,9 +14,10 @@ our @EXPORT = qw(
     is_jpath_count
     does_jpath_value_match
     do_jpath_values_match
+    does_jpath_contains
 );
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 my $CLASS = __PACKAGE__;
 
@@ -56,6 +57,20 @@ sub do_jpath_values_match($$$;$) {
     my $tb = $CLASS->builder();
     return $tb->ok($is_ok, $name);
 }
+
+sub does_jpath_contains($$$;$) {
+    my ($doc, $jpath_str, $match, $name) = @_;
+
+    my $json_assert = JSON::Assert->new();
+
+    # do the test and remember the result
+    my $is_ok = $json_assert->does_jpath_contains($doc, $jpath_str, $match);
+
+    my $tb = $CLASS->builder();
+    return $tb->ok($is_ok, $name);
+
+}
+
 
 1;
 
@@ -114,6 +129,12 @@ matched smart matches against C<$match>.
 
 Again, C<$match> can be a scalar, regex, arrayref or anything the smart match
 operator can match on.
+
+=item does_jpath_contains($doc, $jpath, $match, $name)
+
+Test passes if C<$jpath> contains a key in C<$doc> that matches against C<$match>.
+
+Again, C<$match> can be a scalar, regex, arrayref.
 
 =back
 
