@@ -217,7 +217,7 @@ sub does_jpath_contains {
     my ($doc, $jpath_str, $match) = @_;
 
     $self->_clear_error();
-    eval { $self->assert_jpath_contains($doc, $jpath_str, $match) };
+    eval { $self->assert_json_contains($doc, $jpath_str, $match) };
     if ( $@ ) {
         $self->error($@);
         return;
