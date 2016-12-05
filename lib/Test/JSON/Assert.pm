@@ -59,7 +59,7 @@ sub do_jpath_values_match($$$;$) {
 }
 
 sub does_jpath_contains($$$;$) {
-    my ($doc, $jpath_str, $match, name) = @_;
+    my ($doc, $jpath_str, $match, $name) = @_;
 
     my $json_assert = JSON::Assert->new();
 
@@ -129,6 +129,12 @@ matched smart matches against C<$match>.
 
 Again, C<$match> can be a scalar, regex, arrayref or anything the smart match
 operator can match on.
+
+=item does_jpath_contains($doc, $jpath, $match, $name)
+
+Test passes if C<$jpath> contains a key in C<$doc> that matches against C<$match>.
+
+Again, C<$match> can be a scalar, regex, arrayref.
 
 =back
 
