@@ -1,5 +1,5 @@
 ## ----------------------------------------------------------------------------
-# Copyright (C) 2014-2105 NZRS Ltd
+# Copyright (C) 2014-2016 NZRS Ltd
 ## ----------------------------------------------------------------------------
 package JSON::Assert;
 
@@ -9,7 +9,7 @@ use Test::Deep::NoTest;
 
 $JSON::Path::Safe = 0;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 our $VERBOSE = $ENV{JSON_ASSERT_VERBOSE} || 1;
 
 has 'error' =>

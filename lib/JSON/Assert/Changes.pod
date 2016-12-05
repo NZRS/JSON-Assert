@@ -1,5 +1,15 @@
 =head1 CHANGELOG FOR XML::Assert
 
+=head2 VERSION 0.04, 06 DECEMBER 2016
+
+=over
+
+=item *
+
+Added does_jpath_contains method
+
+=back
+
 =head2 VERSION 0.03, 15 MAY 2015
 
 =over

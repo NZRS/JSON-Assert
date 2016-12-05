@@ -1,5 +1,5 @@
 ## ----------------------------------------------------------------------------
-# Copyright (C) 2014-2015 NZRS Ltd.
+# Copyright (C) 2014-2016 NZRS Ltd.
 ## ----------------------------------------------------------------------------
 package Test::JSON::Assert;
 
@@ -17,7 +17,6 @@ our @EXPORT = qw(
     does_jpath_contains
 );
 
-our $VERSION = '0.04';
 
 my $CLASS = __PACKAGE__;
 
