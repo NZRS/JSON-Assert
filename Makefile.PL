@@ -2,8 +2,8 @@ use inc::Module::Install;
 
 name     'JSON-Assert';
 all_from 'lib/JSON/Assert.pm';
-author   'Andrew Ruthven <andrew@etc.gen.nz>';
-repository 'git://github.com/catalyst/JSON-Assert';
+author   'NZRS Development Team <developers@nzrs.net.nz>';
+repository 'https://github.com/nzrs/JSON-Assert';
 
 perl_version '5.010_000';
 
