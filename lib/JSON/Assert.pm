@@ -9,7 +9,7 @@ use Test::Deep::NoTest;
 
 $JSON::Path::Safe = 0;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 our $VERBOSE = $ENV{JSON_ASSERT_VERBOSE} || 1;
 
 has 'error' =>

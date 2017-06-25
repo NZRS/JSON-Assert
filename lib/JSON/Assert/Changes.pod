@@ -1,5 +1,15 @@
 =head1 CHANGELOG FOR JSON::Assert
 
+=head2 VERSION 0.05, 25 JUNE 2017
+
+=over
+
+=item *
+
+Fixed tests
+RT #121978 MYMETA must not be included
+
+=back
 =head2 VERSION 0.04, 06 DECEMBER 2016
 
 =over

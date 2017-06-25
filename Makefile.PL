@@ -13,6 +13,7 @@ requires        "JSON::Path" => 0;
 build_requires 'Test::More';
 build_requires 'Test::Builder::Tester';
 test_requires 'Test::Exception';
+test_requires 'Test::Deep::NoTest';
 
 include 'Test::Exception';
 include 'Sub::Uplevel';
