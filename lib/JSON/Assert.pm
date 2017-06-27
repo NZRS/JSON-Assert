@@ -3,7 +3,8 @@
 ## ----------------------------------------------------------------------------
 package JSON::Assert;
 
-use Any::Moose;
+use Moo;
+use MooX::Types::MooseLike::Base 'Str';
 use JSON::Path;
 use Test::Deep::NoTest;
 
@@ -14,7 +15,7 @@ our $VERBOSE = $ENV{JSON_ASSERT_VERBOSE} || 1;
 
 has 'error' =>
     is => "rw",
-    isa => "Str",
+    isa => Str,
     clearer => "_clear_error",
     ;
 
